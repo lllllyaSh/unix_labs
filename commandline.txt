@@ -1,0 +1,155 @@
+    1  sudo dnf install telegram
+    2  vim lab.s
+    3  ssh samos.dozen.mephi.ru
+    4  ssh shaposhnik.id@samos.dozen.mephi.ru
+    5  whoami
+    6  root
+    7  whoaim
+    8  whoami
+    9  echo "Hello world"
+   10  date
+   11  cal
+   12  man cal
+   13  cal -3
+   14  history
+   15  clear
+   16  ss
+   17  pwd
+   18  cd /
+   19  ls
+   20  cd ..
+   21  pwd
+   22  ls
+   23  ls /var
+   24  cd ~
+   25  pwd
+   26  cd ..
+   27  pwd
+   28  ls
+   29  man ls
+   30  ls -l
+   31  cd
+   32  ls
+   33  pwd
+   34  ls -l
+   35  mkdir fruits
+   36  cd /
+   37  mkdir ~/animals
+   38  touch /tmp/temp
+   39  cd
+   40  ls
+   41  cd fruits
+   42  touch apple
+   43  touch banana
+   44  touch pineapple
+   45  touch lion
+   46  ls
+   47  touch ../animals/cat.txt
+   48  touch ../animals/dog.txt
+   49  touch ../animals/elephant.txt
+   50  stat -f apple
+   51  stat apple
+   52  ls b*
+   53  ls *a
+   54  ls [bi]*
+   55  ls
+   56  ls b* i*
+   57  cp /etc/passwd ~
+   58  cat /etc/issue
+   59  cp /etc/issue apple
+   60  ls
+   61  vim apple 
+   62  cat apple 
+   63  mv lion ../animals
+   64  cd ..
+   65  cd animals/
+   66  ls
+   67  cd ..
+   68  cd fruits/
+   69  ls
+   70  mv pineapple pineaple
+   71  mv pineaple pineapple
+   72  ls
+   73  wc -l /etc/passwd
+   74  cd ~
+   75  ln -s /etc/passwd passwd_link
+   76  ln .bash_history history_hard
+   77  ls -l ~/.bash_history
+   78  ls
+   79  rm /fruits/apple
+   80  rm fruits/apple
+   81  mkdir rmme & rmdir rmme
+   82  ls
+   83  rmdir fruits
+   84  rm -fr fruits
+   85  cat /etc/passwd /var/log/boot.log
+   86  cp /enc/init.d/ ~
+   87  cp /etc/init.d/ ~
+   88  cp -r /etc/init.d/ ~
+   89  cp /etc/init.d/ ~
+   90  rm ~init.d
+   91  cut -d: f1 /etc/passwd -l
+   92  cut -d: f1 /etc/passwd | *l
+   93  cut -d: f1 /etc/passwd | -l
+   94  cut -d: f1 /etc/passwd | sort
+   95  cut -d: f1 /etc/passwd
+   96  cut -d: -f1 /etc/passwd
+   97  cut -d: -f1 /etc/passwd | sort
+   98  man column
+   99  man less
+  100  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  101  cat /etc/passwd
+  102  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  103  cut -d: -f1,3 /etc/passwd | column -ts: | less
+  104  grep :/bin/bash /etc/passwd |wc -l
+  105  grep :/bin/bash /etc/passwd | sort -p
+  106  grep :/bin/bash /etc/passwd | sort | -p
+  107  grep :/bin/bash /etc/passwd | sort
+  108  man grep
+  109  grep :/bin/bash /etc/passwd | sort -r
+  110  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | tail -n25
+  111  rpm -ql man-db |xargs -l | du 2> /dev/null | sort -n
+  112  top -b -n1
+  113* top -b -n1 | sort f
+  114  top -b -n1 | sort
+  115  top
+  116  top -b -n1 | sort -k 1
+  117  clear
+  118  top -b -n1 | sort -k 1
+  119  top -b -n1 |tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+  120  top
+  121  top -b -n1 |tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+  122* cat /etc/passwd | sort 
+  123  cut -d: -f1 /etc/passwd | sort
+  124  cat /etc/passwd
+  125  cut -d: -f1 -f7 /etc/passwd | sort
+  126  cut -d: -f1,7 /etc/passwd | sort
+  127  sort -t: -k1,1 /etc/passwd | tr ":" " "
+  128  yum install -y git
+  129  cd /usr/share/doc/git*
+  130  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  131  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  132  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  133  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  134  ping ya.ru
+  135  curl wttr.in
+  136  hostname -I
+  137  curl ifconfig.me
+  138  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  139  less
+  140  id
+  141  whoami
+  142  sudo id
+  143  id
+  144  sudo less /var/log/messages
+  145  su
+  146  id
+  147  whoami
+  148  pwd
+  149  cd ..
+  150  ls
+  151  cd ..
+  152  pwd
+  153  cd
+  154  pwd
+  155  history > commandline.txt
